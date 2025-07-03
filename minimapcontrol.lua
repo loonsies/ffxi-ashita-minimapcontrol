@@ -303,7 +303,7 @@ minimapcontrol.record_zoom_level = function()
     end
 
     for line in f:lines() do
-        local _, _, zoom_level = string.find(line, 'zoom[%s]*=[%s]*([%d%,]+)')
+        local _, _, zoom_level = string.find(line, 'zoom[%s]*=[%s]*([%d%.,]+)')
         if zoom_level ~= nil then
             minimapcontrol.settings.zoom[minimapcontrol.zone_id] = zoom_level
             settings.save()
